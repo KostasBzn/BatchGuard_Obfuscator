@@ -1,6 +1,6 @@
 ## BatchGuard Batch Obfuscator
 
-**BatchGuard** is a simple batch file obfuscator designed to transform your batch scripts into an unreadable format, enhancing their security and hiding their original logic. By encoding, adding random characters, and using encoding techniques, BatchGuard makes reverse-engineering your batch files a challenging task.
+**BatchGuard** is a simple batch file obfuscator written in Python that transforms your batch scripts into an unreadable format, enhancing their security and hiding their original logic. By encoding, adding random characters, and using encoding techniques, BatchGuard makes reverse-engineering your batch files a challenging task.
 
 ### Features
 - **Obfuscation**: Transforms the content of a batch file into a more complex and difficult-to-understand format.
@@ -11,10 +11,10 @@
 - **Operating System**: Windows. It may not work as expected on other operating systems such as Linux or macOS.
 
 ### How It Works
-BatchGuard works by reading the contents of your batch script, applying various encoding techniques, and optionally adding random carets (`^`) to obfuscate the file further. The final result is a new batch file that can still be executed but is unreadable. The logic of the programm can be edited for different types of obuscations.
+BatchGuard works by reading the contents of your batch script, applying various encoding techniques, and optionally adding random carets (`^`) to obfuscate the file further. The final result is a new batch file that can still be executed but is unreadable. The logic of the tool can be edited for different types of obuscations.
 
 ### Encoding Example
-In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and execute them.
+In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and executing them.
 
 ### Usage
 1. Clone the repository or download the files.
