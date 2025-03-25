@@ -1,5 +1,6 @@
 import time
 import easygui
+import os
 
 
 
@@ -14,9 +15,16 @@ def open_file():
     file_path = easygui.fileopenbox(title="Please select a batch file")
     if not file_path:
         print("No file selected. Exiting")
+        exit()
+    with open(file_path, 'r') as f:
+        file_name = os.path.basename(file_path)
+        text = f.read()
+        return file_name, text
 
 def main():
-    print("main function")
+    file_name, file_content = open_file()
+    print(f"Selected file: {file_name}")
+    #print("con", file_content)
 
 if __name__ == "__main__":
     main()
