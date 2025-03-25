@@ -26,5 +26,12 @@ def main():
     print(f"Selected file: {file_name}")
     #print("con", file_content)
 
+    yorn = input("Would you like to add random ^ in the obfuscation (may break the script, not recommended)? [y/n]: ").strip().lower()
+    if yorn == "y":
+        num_carrots = int(input(f"Number of ^ you want (max {len(file_content)}"))
+        print("carrot logic")
+    elif yorn != "n":
+        print("Invalid input, exiting...")
+        exit()
 if __name__ == "__main__":
     main()
