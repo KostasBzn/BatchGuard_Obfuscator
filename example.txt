@@ -10,7 +10,7 @@ powershell -Command "Write-Output 'This message is from PowerShell!'"
 
 :: Decode and display the encoded string
 echo Decoding the encoded string...
-set "encoded=SgBnAGkAZwB0AEcAWAB6AHMAdwBiAGgAbQB1AFMASABJAE8AQQA="
+set "encoded=SABlAGwAbABvACAAVwBvAHIAbABkACAAZgByAG8AbQAgAGIAYQBzAGUANgA0ACAAZABlAGMAbwBkAGUAZAAgAHQAZQB4AHQA"
 for /f "delims=" %%i in ('powershell -Command "[System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('%encoded%'))"') do set "decoded=%%i"
 echo Decoded string: %decoded%
 
