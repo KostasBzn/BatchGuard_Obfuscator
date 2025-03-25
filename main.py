@@ -2,6 +2,7 @@ import time
 import easygui
 import os
 import pyfiglet
+import random
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -19,6 +20,19 @@ def open_file():
         text = f.read()
         return file_name, text
 
+def random_carrots(text, num_carrots):
+    if num_carrots > len(text) - 1:
+        print("Error: Number of carrots cannot exceed the text lenght.")
+        exit()
+    carrot_positions = random.sample(range(len(text)), num_carrots)
+    result = []
+    for i, char in enumerate(text):
+        result.append(char)
+        if i in carrot_positions:
+            result.append('^')
+    carrotated = ''.join(result)
+    return carrotated
+
 def main():
     print(pyfiglet.figlet_format("BatchGuard Obfuscator"))
     print("Please pick a batch file")
@@ -28,8 +42,10 @@ def main():
 
     yorn = input("Would you like to add random ^ in the obfuscation (may break the script, not recommended)? [y/n]: ").strip().lower()
     if yorn == "y":
-        num_carrots = int(input(f"Number of ^ you want (max {len(file_content)}"))
-        print("carrot logic.")
+        num_carrots = int(input(f"Number of ^ you want (max {len(file_content)}): "))
+        file_content = random_carrots(file_content, num_carrots)
+        #print("carrot logic.")
+        #print("carrotated:", file_content) ok
     elif yorn != "n":
         print("Invalid input, exiting...")
         exit()
