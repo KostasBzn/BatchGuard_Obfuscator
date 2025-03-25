@@ -16,7 +16,7 @@ BatchGuard works by reading the contents of your batch script, applying various 
 
 ### Encoding Example
 
-In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and running it.
+In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and execute them.
 
 ### Usage
 
@@ -24,5 +24,8 @@ In the repository there is an `example.txt` file with simple commands that you c
 2. Navigate to the folder containing the App.
 3. Install the required libraries: `pip install -r requirements.txt`
 4. Run the `main.py` script: `python main.py`
+
+## Ethical Disclaimer
+This tool is intended for educational purposes and to help improve your understanding of obfuscation, programming, and cybersecurity. **Misuse is prohibited**.
 
 
