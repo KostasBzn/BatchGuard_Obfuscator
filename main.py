@@ -4,6 +4,7 @@ import os
 import pyfiglet
 import random
 from replacement_helper import ReplacementHelper
+import re
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -22,7 +23,14 @@ def open_file():
         return file_name, text
     
 def encode_helper(text):
-    print("logic with class")
+    #pass
+    text = text.replace('%%~', 'ckoco').replace('%~', 'croco')
+    #processed = text + "\nset a = %%~i\nset a = % + %~1\"%\nset a = %a%\n:abc"
+    #In case of something addionional
+    replacer = ReplacementHelper("replaced", 2)
+    eh_text = re.sub(r"(%)", replacer.doit, text)
+    return eh_text
+    
 
 def random_carrots(text, num_carrots):
     if num_carrots > len(text) - 1:
@@ -53,5 +61,8 @@ def main():
     elif yorn != "n":
         print("Invalid input, exiting...")
         exit()
+
+    processed_content = encode_helper(file_content)
+    print("processed%", processed_content)
 if __name__ == "__main__":
     main()
