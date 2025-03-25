@@ -3,6 +3,7 @@ import easygui
 import os
 import pyfiglet
 import random
+from replacement_helper import ReplacementHelper
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -19,6 +20,9 @@ def open_file():
         file_name = os.path.basename(file_path)
         text = f.read()
         return file_name, text
+    
+def encode_helper(text):
+    print("logic with class")
 
 def random_carrots(text, num_carrots):
     if num_carrots > len(text) - 1:
