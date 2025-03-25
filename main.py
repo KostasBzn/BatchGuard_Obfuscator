@@ -6,6 +6,7 @@ import random
 from replacement_helper import ReplacementHelper
 import re
 import subprocess
+from tqdm import tqdm
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -107,8 +108,13 @@ def main():
     output_name = input("Output filename (without extension): ").strip()
     if not output_name:
         output_name = "obfuscated"
+
+    for _ in tqdm(range(5), desc="Obfuscating..."):
+        time.sleep(0.2)
     
     compiler(output_name, processed_content)
+    print(f"\nSaved to {output_name}.bat")
+    print("Operation complete. Exiting...")
 
 if __name__ == "__main__":
     main()
