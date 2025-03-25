@@ -5,7 +5,7 @@
 ### Features
 
 - **Obfuscation**: Transforms the content of a batch file into a more complex and difficult-to-understand format.
-- **Random Carrots**: Add random `^` symbols to confuse and break the logic flow (use cautiously as it may break scripts).
+- **Random Carets**: Add random `^` symbols to confuse and break the logic flow (use cautiously as it may break scripts).
 - **Encoding**: Uses custom encoding scheme to replace characters and hide the actual logic.
 - **Easy-to-use GUI**: Simple file picker to choose the batch file to obfuscate.
 - **Progress Indicator**: Shows progress while the obfuscation process runs.
