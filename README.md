@@ -18,6 +18,12 @@ BatchGuard works by reading the contents of your batch script, applying various 
 
 In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and execute them.
 
+### System Requirements
+
+- **Operating System**: Windows
+- This tool is designed to run specifically on Windows environments. It may not work as expected on other operating systems such as Linux or macOS.
+
+
 ### Usage
 
 1. Clone the repository or download the files.
