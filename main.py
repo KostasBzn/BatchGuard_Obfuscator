@@ -5,6 +5,7 @@ import pyfiglet
 import random
 from replacement_helper import ReplacementHelper
 import re
+import subprocess
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -23,15 +24,25 @@ def open_file():
         return file_name, text
     
 def encode_helper(text):
-    #pass
     text = text.replace('%%~', 'ckoco').replace('%~', 'croco')
     #processed = text + "\nset a = %%~i\nset a = % + %~1\"%\nset a = %a%\n:abc"
     #In case of something addionional
     replacer = ReplacementHelper("replaced", 2)
     eh_text = re.sub(r"(%)", replacer.doit, text)
     return eh_text
-    
 
+def compiler(name, content):
+    poggers =clss + "\n" + echooff + "\n" + letters + "\n" + content + "\n"
+    #print("poggers", poggers)
+    with open(f"{name}.bat", "w") as f:
+        f.write(poggers)
+
+    bro1 = 'echo //4mY2xzDQo= > "temp.~b64" && certutil.exe -f -decode "temp.~b64" "{namee}o.bat" && del "temp.~b64" && copy "{namee}o.bat" /b + "{namee}.bat" /b'.format(namee=name)
+    bro2 = 'del "{namee}.bat" /f && rename "{namee}o.bat" "{namee}.bat"'.format(namee=name)
+
+    subprocess.run(bro1, stdout=subprocess.PIPE, shell=True, stderr=subprocess.PIPE, text=True)
+    subprocess.run(bro2, stdout=subprocess.PIPE, shell=True, stderr=subprocess.PIPE, text=True)
+    
 def random_carrots(text, num_carrots):
     if num_carrots > len(text) - 1:
         print("Error: Number of carrots cannot exceed the text lenght.")
@@ -63,6 +74,8 @@ def main():
         exit()
 
     processed_content = encode_helper(file_content)
-    print("processed%", processed_content)
+    #print("processed%", processed_content)
+
+
 if __name__ == "__main__":
     main()
