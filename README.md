@@ -8,17 +8,13 @@
 - **Encoding**: Uses custom encoding scheme to replace characters and hide the actual logic.
 - **Easy-to-use GUI**: Simple file picker to choose the batch file to obfuscate.
 - **Progress Indicator**: Shows progress while the obfuscation process runs.
+- **Operating System**: Windows. It may not work as expected on other operating systems such as Linux or macOS.
 
 ### How It Works
 BatchGuard works by reading the contents of your batch script, applying various encoding techniques, and optionally adding random carets (`^`) to obfuscate the file further. The final result is a new batch file that can still be executed but is unreadable. The logic of the programm can be edited for different types of obuscations.
 
 ### Encoding Example
 In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and execute them.
-
-### System Requirements
-- **Operating System**: Windows
-- This tool is designed to run specifically on Windows environments. It may not work as expected on other operating systems such as Linux or macOS.
-
 
 ### Usage
 1. Clone the repository or download the files.
