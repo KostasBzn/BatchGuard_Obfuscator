@@ -1,3 +1,2 @@
-easygui
 pyfiglet
 tqdm
