@@ -6,6 +6,7 @@ import subprocess
 from tkinter.filedialog import askopenfilename
 import pyfiglet
 from tqdm import tqdm
+from replacement_helper import ReplacementHelper
 
 letters = """SEt R^=Jg^%pUBLIc:~13,1%^gtGXz%publIc:~4,1%w%pUBLIc:~11,1%^hm%pUBLIc:~10,1%^S^HI^O^A""" # ok
 echooff ="""@%publIc:~5,1%%pUBLIc:~0,1%ho oF%pUBLIc:~46,16%f""" # ok
@@ -62,16 +63,6 @@ def add_random_carrots(text, num_carets):
         if i in positions:
             result.append('^')
     return ''.join(result)
-
-class ReplacementHelper:
-    def __init__(self, replace_with, every_nth):
-        self.counter = 0
-        self.replace_with = replace_with
-        self.every_nth = every_nth
-
-    def doit(self, match):
-        self.counter += 1
-        return match.group(1) if self.counter % self.every_nth else self.replace_with
 
 def encode_helper(text):
     text = text.replace('%%~', 'ckoco').replace('%~', 'croco')
