@@ -17,7 +17,9 @@ git clone git@github.com:KostasBzn/BatchGuard_Obfuscator.git
 cd BatchGuard_Obfuscator
 ```
 2. Run the `bat_obf.py` script: 
-```python bat_obf.py```
+```
+python bat_obf.py
+```
 
 ## Ethical Disclaimer
 This tool is intended for educational purposes and to help improve your understanding of obfuscation, programming, and cybersecurity. **Misuse is prohibited**.
