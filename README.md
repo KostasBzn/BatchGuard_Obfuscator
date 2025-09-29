@@ -2,11 +2,8 @@
 
 **Updated version from my old obfuscator**
 
-**BatchGuard** is a simple batch file obfuscator written in Python that transforms your batch scripts into an unreadable format, using `xor` encoding.
+**BatchGuard** is a simple tool written in Python that `XOR-encodes` batch files into an unreadable format.
 Goal: learning, testing, and protecting simple scripts from casual reading.
-
-### Encoding Example
-In the repository there is an `example.txt` file with simple commands that you can experiment by obfuscating and executing them.
 
 ### Usage
 1. Clone the repository or download the files.
